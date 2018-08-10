@@ -113,14 +113,17 @@ declare module '*.vue' {
     @Component
     export default class ExampleComponent extends Vue {
 
+        // method
         init(params: Point): void {
             console.log(params.color, params.height);
         }
 
+        // method
         hey(): void {
             alert('hohoho');
         }
 
+        // lifecycle
         mounted(): void {
             console.log('typescript is working')
             this.init({color: 'red', height: 400});
@@ -187,3 +190,7 @@ declare module '*.vue' {
 ```
 11. Lastly, build source file either using `npm run dev` or `npm run watch`
 12. Have fun!
+
+### Reference
+1. `vue-class-component` [tutorial](https://github.com/vuejs/vue-class-component/blob/master/README.md)
+
